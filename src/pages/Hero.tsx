@@ -1,5 +1,6 @@
 import HeroAbout from "../views/Hero/HeroAbout";
 import HeroIndex from "../views/Hero/HeroIndex";
+import HeroRoadmap from "../views/Hero/HeroRoadmap";
 import HeroTokenomics from "../views/Hero/HeroTokenomics";
 
 const Hero = () => {
@@ -8,6 +9,7 @@ const Hero = () => {
             <HeroIndex />
             <HeroAbout />
             <HeroTokenomics />
+            <HeroRoadmap />
         </section>
     );
 }

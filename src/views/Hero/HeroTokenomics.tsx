@@ -63,7 +63,7 @@ const HeroTokenomics = () => {
         <section className="w-full min-h-screen h-auto bg-bg px-10 py-20 overflow-x-hidden">
             <div className="max-w-[1500px] w-full h-full mx-auto mt-[10rem] flex items-center gap-x-8 lg:flex-row flex-col-reverse">
 
-                <div className="w-full" ref={imageRef}>
+                <div className="w-full mt-14 lg:mt-0" ref={imageRef}>
                     <motion.img initial={{ x: -500, opacity: 0, rotate: -180 }} animate={imageView ? { x: 0, opacity: 1, rotate: 0 } : {}} transition={{ duration: 1.5 }} src="/tokenomics/tokens.webp" alt="Tokens" className="md:w-auto w-[13rem] mx-auto mt-10 md:mt-0" />
                 </div>
 
