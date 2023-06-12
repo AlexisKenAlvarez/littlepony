@@ -137,7 +137,7 @@ const HeroRoadmap = () => {
                     </Slider>
                 </div>
 
-                <div className="relative z-10 mx-auto w-fit flex items-center gap-x-7 mt-10">
+                <div className="relative z-10 mx-auto w-fit items-center gap-x-7 mt-10 2xl:hidden flex">
 
                     <button className="" onClick={() => sliderRef?.current?.slickPrev()}>
                         <img src="/roadmap/buttonLeft.webp" alt="buttonLeft" loading="lazy" className="" />
