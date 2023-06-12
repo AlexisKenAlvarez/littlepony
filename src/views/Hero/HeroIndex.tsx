@@ -33,7 +33,11 @@ const HeroIndex = () => {
 
             <Nav />
 
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity }} className="w-full absolute h-auto left-0 z-10">
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity }} className="w-full absolute h-auto left-0 z-10 top-6">
+                <img src="/clouds/sleeping.webp" alt="Cloud" className="w-24 absolute" />
+            </motion.div>
+
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 65, ease: "linear", repeat: Infinity, delay: 2 }} className="w-full absolute h-auto left-0 z-10">
                 <img src="/clouds/cloud1.webp" alt="Cloud" className="w-32 absolute" />
             </motion.div>
 
