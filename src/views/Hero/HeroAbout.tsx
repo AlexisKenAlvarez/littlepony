@@ -34,7 +34,7 @@ const HeroAbout = () => {
     }
 
     return (
-        <section className="font-poppins w-full bg-bg h-auto py-20 pt-[10rem] relative flex items-center overflow-x-hidden px-10" ref={ref}>
+        <section className="font-poppins w-full bg-bg h-auto py-20 pt-[10rem] relative flex items-center overflow-x-hidden px-10" id="about" ref={ref}>
             <img src="/circle2.webp" alt="Circle" className="absolute top-0 right-5 md:w-[20rem] w-[10rem] -translate-y-1/2" />
 
             <motion.img initial={{ x: 100, opacity: 0 }} animate={inView ? { x: 0, opacity: 0.05 } : {}} transition={{ duration: 1.5 }} src="/about.webp" alt="About" className="absolute right-0 bottom-0 h-full" />

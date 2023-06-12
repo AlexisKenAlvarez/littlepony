@@ -99,7 +99,7 @@ const HeroRoadmap = () => {
     ]
 
     return (
-        <section className="w-full min-h-screen h-auto bg-bg md:px-10 px-4 py-20 relative" ref={containerRef}>
+        <section className="w-full min-h-screen h-auto bg-bg md:px-10 px-4 py-20 relative" id="roadmap" ref={containerRef}>
 
             <img src="/roadmap/roadmap.webp" alt="Background" className="w-full absolute bottom-0 left-0 pointer-events-none" />
 

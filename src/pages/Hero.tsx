@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import HeroAbout from "../views/Hero/HeroAbout";
 import HeroIndex from "../views/Hero/HeroIndex";
 import HeroRoadmap from "../views/Hero/HeroRoadmap";
@@ -10,6 +11,7 @@ const Hero = () => {
             <HeroAbout />
             <HeroTokenomics />
             <HeroRoadmap />
+            <Footer/>
         </section>
     );
 }

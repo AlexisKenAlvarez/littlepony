@@ -29,7 +29,7 @@ const HeroIndex = () => {
 
 
     return (
-        <section className="w-full h-screen bg-bg flex font-poppins relative overflow-hidden px-10">
+        <section className="w-full h-screen bg-bg flex font-poppins relative overflow-hidden px-10" id="home">
 
             <img src="/circle2.webp" alt="Circle" className="absolute bottom-0 right-5 md:w-[20rem] w-[10rem] translate-y-1/2" />
 

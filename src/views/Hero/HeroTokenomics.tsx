@@ -60,7 +60,7 @@ const HeroTokenomics = () => {
     const word = "TOKENOMICS"
 
     return (
-        <section className="w-full min-h-screen h-auto bg-bg px-10 py-20 overflow-x-hidden">
+        <section className="w-full min-h-screen h-auto bg-bg px-10 py-20 overflow-x-hidden" id="tokenomics">
             <div className="max-w-[1500px] w-full h-full mx-auto mt-[10rem] flex items-center gap-x-8 lg:flex-row flex-col-reverse">
 
                 <div className="w-full mt-14 lg:mt-0" ref={imageRef}>
