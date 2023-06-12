@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Appear from "../../anim/Appear";
 import Nav from "../../components/Nav";
+import ImageAnim from "../../anim/ImageAnim";
 
 const HeroIndex = () => {
 
@@ -30,53 +31,15 @@ const HeroIndex = () => {
     return (
         <section className="w-full h-screen bg-bg flex font-poppins relative overflow-hidden px-10">
 
+            <img src="/circle2.webp" alt="Circle" className="absolute bottom-0 right-5 md:w-[20rem] w-[10rem] translate-y-1/2" />
 
             <Nav />
 
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity }} className="w-full absolute h-auto left-0 z-10 top-6">
-                <img src="/clouds/sleeping.webp" alt="Cloud" className="w-24 absolute" />
-            </motion.div>
-
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 65, ease: "linear", repeat: Infinity, delay: 2 }} className="w-full absolute h-auto left-0 z-10">
-                <img src="/clouds/cloud1.webp" alt="Cloud" className="w-32 absolute" />
-            </motion.div>
-
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 50, ease: "linear", repeat: Infinity, delay: 3 }} className="w-full absolute h-auto top-20 left-0 z-10 ">
-                <img src="/clouds/cloud2.webp" alt="Cloud" className="w-32 absolute" />
-            </motion.div>
-
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 55, ease: "linear", repeat: Infinity, delay: 5 }} className="w-full absolute h-auto top-12 left-0 z-10 ">
-                <img src="/clouds/cloud3.webp" alt="Cloud" className="w-32 absolute" />
-            </motion.div>
-
-
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity, delay: 12 }} className="w-full absolute h-auto left-0 z-10 top-10">
-                <img src="/clouds/cloud1.webp" alt="Cloud" className="w-32 absolute" />
-            </motion.div>
-
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 50, ease: "linear", repeat: Infinity, delay: 15 }} className="w-full absolute h-auto top-0 left-0 z-10 ">
-                <img src="/clouds/cloud2.webp" alt="Cloud" className="w-32 absolute" />
-            </motion.div>
-
-            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 55, ease: "linear", repeat: Infinity, delay: 9 }} className="w-full absolute h-auto top-16 left-0 z-10 ">
-                <img src="/clouds/cloud3.webp" alt="Cloud" className="w-32 absolute" />
-            </motion.div>
-
-            {/* <img src="/clouds/cloud2.webp" alt="Cloud" className="w-32 absolute top-20 z-10" />
-            <img src="/clouds/cloud3.webp" alt="Cloud" className="w-32 absolute top-12 left-[18rem] z-10" /> */}
-
-
-
-
-            <img src="/circle2.webp" alt="Circle" className="absolute bottom-0 right-5 md:w-[20rem] w-[10rem] translate-y-1/2" />
-
-            <div className="absolute bottom-0 left-0 w-[50%] h-full lg:flex hidden">
-                <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} src="/Unisplit/1.webp" alt="1" className="" />
-                <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} src="/Unisplit/2.webp" alt="2" className="" />
-                <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} src="/Unisplit/3.webp" alt="3" className="" />
+            <div className="absolute bottom-0 left-0 h-full lg:flex hidden">
+                <motion.img initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.5, ease: [0.16, 0.77, 0.47, .97], delay: 0.1, transformOrigin: "bottom" }} src="/main.webp" alt="Pony" className="origin-bottom" />
             </div>
 
-            <div className="max-w-[1500px] w-full h-full flex mx-auto relative z-10">
+            <div className="max-w-[1500px] w-full h-full flex mx-auto relative z-20">
                 <div className="w-full lg:block hidden"></div>
                 <div className="w-full flex  flex-col justify-center">
                     <div className="relative w-fit h-fit mx-auto lg:mx-0 md:text-8xl sm:text-5xl text-4xl">
