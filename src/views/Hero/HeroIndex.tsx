@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Appear from "../../anim/Appear";
+import Nav from "../../components/Nav";
 
 const HeroIndex = () => {
 
@@ -26,8 +28,15 @@ const HeroIndex = () => {
 
 
     return (
-        <section className="w-full h-screen bg-white flex font-poppins relative">
-            <div className="absolute bottom-0 left-0 w-[50%] h-full flex overflow-hidden">
+        <section className="w-full h-screen bg-white flex font-poppins relative overflow-hidden px-10">
+
+            <Nav />
+
+
+            <img src="/circle2.webp" alt="Circle" className="absolute bottom-0 right-5 w-[20rem] translate-y-1/2" />
+            <img src="/rainbow.webp" alt="Rainbow" className="absolute top-0 left-0 z-10" />
+
+            <div className="absolute bottom-0 left-0 w-[50%] h-full flex">
                 <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} src="/Unisplit/1.webp" alt="1" className="" />
                 <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} src="/Unisplit/2.webp" alt="2" className="" />
                 <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} src="/Unisplit/3.webp" alt="3" className="" />
@@ -48,21 +57,28 @@ const HeroIndex = () => {
                     </div>
 
                     <div className="flex flex-col gap-y-4 mt-4">
-                        <p className="">
-                            <span className="text-2xl font-semibold">Welcome</span> to the magical world of My Little Pony on the Ethereum blockchain, where <span className="font-semibold text-myPink">$FRIENDSHIP</span> takes us on a thrilling journey on Equestria, from Ponyville to moonshot Canterlot!
-                        </p>
+                        <Appear>
+                            <p className="">
+                                <span className="text-2xl font-semibold">Welcome</span> to the magical world of My Little Pony on the Ethereum blockchain, where <span className="font-semibold text-myPink italic">$FRIENDSHIP</span> takes us on a thrilling journey on Equestria, from Ponyville to moonshot Canterlot!
+                            </p>
+                        </Appear>
 
-                        <p className=""><span className="text-2xl font-semibold">Join</span> our <span className="font-semibold text-myPink">$FRIENDSHIP</span> magic circle with Twilight Sparkle, Pinkie Pie, Rainbow Dash, Rarity, Fluttershy, & Applejack as we gallop together on the Ethereum blockchain towards new adventures & sonic-rain booms, spreading joy and friendship along the way!</p>
+                        <Appear delay={0.2}>
+                            <p className=""><span className="text-2xl font-semibold">Join</span> our <span className="font-semibold text-myPink italic">$FRIENDSHIP</span> magic circle with Twilight Sparkle, Pinkie Pie, Rainbow Dash, Rarity, Fluttershy, & Applejack as we gallop together on the Ethereum blockchain towards new adventures & sonic-rain booms, spreading joy and friendship along the way!</p>
+                        </Appear>
                     </div>
 
-                    <div className="flex mt-10">
-                        <button className="max-w-[10rem] w-full py-3 rounded-md bg-gradient-to-br from-myPink to-myIndigo text-white font-poppins font-semibold text-sm mt-8 self-end">
-                            <a href="" className="">
-                                BUY TOKEN
-                            </a>
-                        </button>
-                        <img src="/cute.webp" alt="Cute" className="w-28 -ml-7" />
-                    </div>
+                    <Appear delay={0.4}>
+                        <div className="flex mt-10">
+                            <button className="max-w-[10rem] w-full py-3 rounded-md bg-gradient-to-br from-myPink to-myIndigo text-white font-poppins font-semibold text-sm mt-8 self-end">
+                                <a href="" className="">
+                                    BUY TOKEN
+                                </a>
+                            </button>
+                            <img src="/cute.webp" alt="Cute" className="w-28 -ml-7" />
+                        </div>
+                    </Appear>
+
 
                 </div>
             </div>
