@@ -55,10 +55,42 @@ const Nav = () => {
             icon: <RiRoadMapFill />
         },
     ]
-    return (
-        <nav className="font-poppins z-20 absolute top-10 px-5 mx-auto left-0 right-0 w-full">
 
-            <div className="hidden sm:block lg:hidden">
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [scrolled, setScrolled] = useState(false)
+
+    const handleScroll = () => {
+        const position = window.scrollY;
+
+        setScrollPosition(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+
+        if (scrollPosition >= 200) {
+            setScrolled(true)
+        } else {
+            setScrolled(false)
+        }
+
+    }, [scrollPosition])
+
+    const handleTop = () => {
+        window.scrollY = 0
+    }
+
+    return (
+        <nav className="font-poppins z-20 fixed top-10 px-5 mx-auto left-0 right-0 w-full">
+
+            <div className="hidden sm:block lg:hidden pointer-events-none">
                 <motion.div initial={{ translateX: "-20%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity }} className="w-full absolute h-auto left-0 z-10 top-6">
                     <img src="/clouds/sleeping.webp" alt="Cloud" className="w-24 absolute" />
                 </motion.div>
@@ -89,7 +121,7 @@ const Nav = () => {
                 </motion.div>
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block pointer-events-none">
                 <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity }} className="w-full absolute h-auto left-0 z-10 top-6">
                     <img loading='lazy' src="/clouds/sleeping.webp" alt="Cloud" className="w- 24 absolute" />
                 </motion.div>
@@ -121,10 +153,10 @@ const Nav = () => {
             </div>
 
 
-            <ul className="flex w-fit lg:ml-auto xl:gap-x-24 lg:gap-x-16 gap-x-10 lg:mr-20 mx-auto z-20 relative">
+            <ul className={`flex w-fit lg:ml-auto xl:gap-x-24 lg:gap-x-16 gap-x-10 lg:mr-20 mx-auto z-20 relative transition-all ease-in-out duration-[0.5s] ${scrolled ? 'opacity-0 translate-x-20' : 'translate-x-0 opacity-1'}`}>
                 {navlist.map((items, index) => {
                     return (
-                        <li className="relative group" key={index}>
+                        <li className="relative group z-20" key={index}>
                             <button className="lg:flex hidden items-center gap-x-[3px]">
                                 {items.icon}
                                 {items.label}

@@ -9,7 +9,9 @@ interface animProp {
 
 const ImageAnim: FunctionComponent<animProp> = (props) => {
 
-    const [ref, view] = useInView({ triggerOnce: false, threshold: 0.5, rootMargin: `${window.innerHeight}px 0px  0px 0px` })
+    const settings = { triggerOnce: false, threshold: 0.5, rootMargin: `${window.innerHeight}px 0px  0px 0px` }
+
+    const [ref, view] = useInView(settings)
 
     return (
         <div ref={ref} className="overflow-hidden">

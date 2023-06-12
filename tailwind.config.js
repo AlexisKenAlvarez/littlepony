@@ -15,7 +15,8 @@ export default {
         myPink: '#C353FD',
         myIndigo: '#23386F',
         cream: '#F8F3EA',
-        bg: '#FAD4EB'
+        bg: '#FAD4EB',
+        tokenPink: '#F9B9ED'
       }
     },
   },

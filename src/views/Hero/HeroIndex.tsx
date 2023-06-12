@@ -39,7 +39,7 @@ const HeroIndex = () => {
                 <motion.img initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.5, ease: [0.16, 0.77, 0.47, .97], delay: 0.1, transformOrigin: "bottom" }} src="/main.webp" alt="Pony" className="origin-bottom" />
             </div>
 
-            <div className="max-w-[1500px] w-full h-full flex mx-auto relative z-20">
+            <div className="max-w-[1500px] w-full h-full flex mx-auto relative z-10">
                 <div className="w-full lg:block hidden"></div>
                 <div className="w-full flex  flex-col justify-center">
                     <div className="relative w-fit h-fit mx-auto lg:mx-0 md:text-8xl sm:text-5xl text-4xl">
