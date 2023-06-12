@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Appear from "../../anim/Appear";
 import Nav from "../../components/Nav";
-import ImageAnim from "../../anim/ImageAnim";
 
 const HeroIndex = () => {
 
