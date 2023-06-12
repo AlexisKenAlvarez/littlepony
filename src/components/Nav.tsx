@@ -157,25 +157,35 @@ const Nav = () => {
                     </motion.div>
                 </div>
 
+                <div className={`transition-all ease-in-out duration-[0.5s] ${scrolled ? 'opacity-0 translate-x-20 pointer-events-none' : 'translate-x-0 opacity-1 pointer-events-auto '}`}>
+                    <ul className={`flex w-fit lg:ml-auto xl:gap-x-24 lg:gap-x-16 gap-x-10 lg:mr-20 mx-auto z-20 relative transition-all ease-in-out duration-[0.5s] lg:flex-row`}>
 
-                <ul className={`flex w-fit lg:ml-auto xl:gap-x-24 lg:gap-x-16 gap-x-10 lg:mr-20 mx-auto z-20 relative transition-all ease-in-out duration-[0.5s] ${scrolled ? 'opacity-0 translate-x-20 pointer-events-none' : 'translate-x-0 opacity-1 pointer-events-auto'}`}>
-                    {navlist.map((items, index) => {
-                        return (
-                            <li className="relative group z-20" key={index} onClick={() => window.location.replace(`${items.slug}`)}>
-                                <button className="lg:flex hidden items-center gap-x-[3px]">
-                                    {items.icon}
-                                    {items.label}
-                                </button>
+                        {navlist.map((items, index) => {
+                            return (
+                                <li className="relative group z-20" key={index} onClick={() => window.location.replace(`${items.slug}`)}>
+                                    <button className="lg:flex hidden items-center gap-x-[3px]">
+                                        {items.icon}
+                                        {items.label}
+                                    </button>
 
-                                <div className="lg:block hidden absolute h-[4px] left-0 right-0 mx-auto -bottom-[5px] rounded-md bg-gradient-to-r from-myPink via-[#FEB958] to-[#FD6E50] w-0 group-hover:w-full transition-width ease-in-out duration-300"></div>
+                                    <div className="lg:block hidden absolute h-[4px] left-0 right-0 mx-auto -bottom-[5px] rounded-md bg-gradient-to-r from-myPink via-[#FEB958] to-[#FD6E50] w-0 group-hover:w-full transition-width ease-in-out duration-300"></div>
 
-                                <div className="lg:hidden block text-lg">
-                                    {items.icon}
-                                </div>
-                            </li>
-                        )
-                    })}
-                </ul>
+                                    <div className="lg:hidden block text-lg">
+                                        {items.icon}
+                                    </div>
+                                </li>
+                            )
+                        })}
+
+                        {/* LOGO HERE */}
+                        {/* <div className="w-20 h-20 lg:relative absolute mx-auto left-0 right-0 top-10 lg:top-0 sm:block hidden">
+                            <img src="/" alt="" className="w-full h-full object-cover" />
+                        </div> */}
+                    </ul>
+
+
+                </div>
+
 
             </nav>
         </>
