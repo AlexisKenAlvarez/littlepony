@@ -28,13 +28,43 @@ const HeroIndex = () => {
 
 
     return (
-        <section className="w-full h-screen bg-white flex font-poppins relative overflow-hidden px-10">
+        <section className="w-full h-screen bg-bg flex font-poppins relative overflow-hidden px-10">
+
 
             <Nav />
 
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity }} className="w-full absolute h-auto left-0 z-10">
+                <img src="/clouds/cloud1.webp" alt="Cloud" className="w-32 absolute" />
+            </motion.div>
+
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 50, ease: "linear", repeat: Infinity, delay: 3 }} className="w-full absolute h-auto top-20 left-0 z-10 ">
+                <img src="/clouds/cloud2.webp" alt="Cloud" className="w-32 absolute" />
+            </motion.div>
+
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 55, ease: "linear", repeat: Infinity, delay: 5 }} className="w-full absolute h-auto top-12 left-0 z-10 ">
+                <img src="/clouds/cloud3.webp" alt="Cloud" className="w-32 absolute" />
+            </motion.div>
+
+
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "110%" }} transition={{ duration: 60, ease: "linear", repeat: Infinity, delay: 12 }} className="w-full absolute h-auto left-0 z-10 top-10">
+                <img src="/clouds/cloud1.webp" alt="Cloud" className="w-32 absolute" />
+            </motion.div>
+
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 50, ease: "linear", repeat: Infinity, delay: 15 }} className="w-full absolute h-auto top-0 left-0 z-10 ">
+                <img src="/clouds/cloud2.webp" alt="Cloud" className="w-32 absolute" />
+            </motion.div>
+
+            <motion.div initial={{ translateX: "-10%" }} animate={{ translateX: "120%" }} transition={{ duration: 55, ease: "linear", repeat: Infinity, delay: 9 }} className="w-full absolute h-auto top-16 left-0 z-10 ">
+                <img src="/clouds/cloud3.webp" alt="Cloud" className="w-32 absolute" />
+            </motion.div>
+
+            {/* <img src="/clouds/cloud2.webp" alt="Cloud" className="w-32 absolute top-20 z-10" />
+            <img src="/clouds/cloud3.webp" alt="Cloud" className="w-32 absolute top-12 left-[18rem] z-10" /> */}
+
+
+
 
             <img src="/circle2.webp" alt="Circle" className="absolute bottom-0 right-5 md:w-[20rem] w-[10rem] translate-y-1/2" />
-            <img src="/rainbow.webp" alt="Rainbow" className="absolute top-0 left-0 z-10 md:w-auto w-20" />
 
             <div className="absolute bottom-0 left-0 w-[50%] h-full lg:flex hidden">
                 <motion.img initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} src="/Unisplit/1.webp" alt="1" className="" />

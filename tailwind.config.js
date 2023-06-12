@@ -14,7 +14,8 @@ export default {
       colors: {
         myPink: '#C353FD',
         myIndigo: '#23386F',
-        cream: '#F8F3EA'
+        cream: '#F8F3EA',
+        bg: '#FAD4EB'
       }
     },
   },
